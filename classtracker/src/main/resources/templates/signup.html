@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigTracker - Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f6f8;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      font-weight: 600;
+    }
+
+    header span {
+      font-size: 1.1rem;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+
+    .signup-container {
+      max-width: 400px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .signup-container p {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    .signup-container input,
+    .signup-container select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .signup-container label {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .signup-container label input {
+      margin-right: 0.5rem;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #0e1525;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .signup-container .footer-link {
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .feature-boxes {
+      max-width: 400px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+    }
+
+    .feature-box strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <span>🕒 GigTracker</span>
+  <a href="#">Sign In</a>
+</header>
+
+<div class="signup-container">
+  <h2>Create Your Account</h2>
+  <p>Start tracking your gig work and maximize your earnings</p>
+  <input type="text" placeholder="Enter your full name">
+  <input type="email" placeholder="Enter your email">
+  <input type="password" placeholder="Create a password">
+  <input type="password" placeholder="Confirm your password">
+  <select>
+    <option disabled selected>Select your main gig</option>
+    <option>Delivery</option>
+    <option>Freelance</option>
+    <option>Rideshare</option>
+    <option>Other</option>
+  </select>
+  <label>
+    <input type="checkbox"> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+  </label>
+  <button>Create Account</button>
+  <p class="footer-link">Already have an account? <a href="#">Sign in</a></p>
+</div>
+
+<div class="feature-boxes">
+  <div class="feature-box">
+    <strong>📅 Time Tracking</strong>
+    Log hours across multiple gigs and days with precision
+  </div>
+  <div class="feature-box">
+    <strong>$ Pay Calculation</strong>
+    Automatic earnings calculation based on time and rates
+  </div>
+  <div class="feature-box">
+    <strong>📊 Analytics</strong>
+    Insights into your most profitable gigs and time slots
+  </div>
+</div>
+</body>
+</html>

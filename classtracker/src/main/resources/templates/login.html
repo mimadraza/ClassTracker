@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GigTracker Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+          box-sizing: border-box;
+          font-family: 'Inter', sans-serif;
+        }
+
+        body {
+          background: #f5f6f8;
+          margin: 0;
+          padding: 0;
+        }
+
+        header {
+          text-align: center;
+          padding: 1rem;
+          font-weight: 600;
+        }
+
+        nav {
+          position: absolute;
+          top: 1rem;
+          right: 2rem;
+        }
+
+        nav a {
+          margin-left: 1.5rem;
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+        }
+
+        .login-container {
+          max-width: 400px;
+          margin: 5rem auto 1rem;
+          background: white;
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.05);
+          text-align: center;
+        }
+
+        .login-container h2 {
+          margin: 0;
+          font-size: 1.25rem;
+        }
+
+        .login-container p {
+          font-size: 0.9rem;
+          color: #777;
+          margin-bottom: 2rem;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+          width: 100%;
+          padding: 0.75rem;
+          margin-bottom: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .login-container button {
+          width: 100%;
+          padding: 0.75rem;
+          background: #0e1525;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .login-container .options {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.85rem;
+          margin-bottom: 1rem;
+        }
+
+        .login-container .divider {
+          margin: 1rem 0;
+          text-align: center;
+          font-size: 0.85rem;
+          color: #999;
+        }
+
+        .social-buttons button {
+          width: 48%;
+          padding: 0.75rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background: white;
+          cursor: pointer;
+          margin-top: 0.5rem;
+        }
+
+        .footer-links {
+          text-align: center;
+          font-size: 0.85rem;
+          margin-top: 3rem;
+          color: #666;
+        }
+
+        .gig-tools {
+          max-width: 400px;
+          margin: 0 auto;
+          background: white;
+          padding: 1.5rem;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.05);
+          text-align: center;
+        }
+
+        .gig-tools h4 {
+          margin-bottom: 1rem;
+        }
+
+        .gig-tools div {
+          display: flex;
+          justify-content: space-around;
+          font-size: 0.85rem;
+        }
+
+        footer {
+          text-align: center;
+          margin-top: 2rem;
+          padding: 1rem;
+          font-size: 0.75rem;
+          color: #888;
+        }
+
+        footer a {
+          margin: 0 1rem;
+          color: #555;
+          text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <span>&#128337; GigTracker</span>
+</header>
+
+<div class="login-container">
+    <h2>Welcome Back</h2>
+    <p>Sign in to track your gig time and earnings</p>
+    <input type="email" placeholder="Enter your email" />
+    <input type="password" placeholder="Enter your password" />
+    <div class="options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot password?</a>
+    </div>
+    <button>Sign In</button>
+    <p style="margin-top: 1rem; font-size: 0.85rem;">
+        Don’t have an account? <a href="#">Sign up for free</a>
+    </p>
+</div>
+<div class="gig-tools">
+    <h4>Track Your Gig Earnings</h4>
+    <div>
+        <span>⏱ Time Tracking</span>
+        <span>📅 Daily Logs</span>
+        <span>$ Pay Calculator</span>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 GigTracker. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact</a>
+</footer>
+</body>
+</html>
