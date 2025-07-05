@@ -1,4 +1,4 @@
-package com.classtracker.classtracker
+package com.classtrackeer.classtracker
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

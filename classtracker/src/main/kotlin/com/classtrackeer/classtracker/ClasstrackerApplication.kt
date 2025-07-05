@@ -1,4 +1,4 @@
-package com.classtracker.classtracker
+package com.classtrackeer.classtracker
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
