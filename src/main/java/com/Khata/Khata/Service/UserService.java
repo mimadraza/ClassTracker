@@ -19,5 +19,10 @@ public class UserService
         User savedUser = userRepository.save(user);
         return savedUser;
     }
+    
+    public User getUserById(Integer id)
+    {
+        return userRepository.findById(id).get();
+    }
 }
 
