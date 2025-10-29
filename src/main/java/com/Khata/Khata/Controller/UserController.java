@@ -1,5 +1,6 @@
 package com.Khata.Khata.Controller;
 
+import com.Khata.Khata.Entity.LoginDTO;
 import com.Khata.Khata.Entity.User;
 import com.Khata.Khata.Service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -30,5 +31,12 @@ public class UserController
         User savedUser = userService.getUserById(id);
         return ResponseEntity.ok(savedUser);
     }
-}
 
+    @GetMapping("/getUser")
+    public User getUserByEmail(String email)
+    {
+        User user = userService.getUserByEmail(email);
+        return user;
+    }
+
+}

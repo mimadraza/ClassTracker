@@ -1,5 +1,6 @@
 package com.Khata.Khata.Service;
 
+import com.Khata.Khata.Entity.LoginDTO;
 import com.Khata.Khata.Entity.User;
 import com.Khata.Khata.Repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,10 @@ public class UserService
     public User getUserById(Integer id)
     {
         return userRepository.findById(id).get();
+    }
+    public User getUserByCred(LoginDTO credentials)
+    {
+        return userRepository.getUserByCred();
     }
 }
 
