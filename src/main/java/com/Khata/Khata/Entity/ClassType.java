@@ -1,6 +1,6 @@
 package com.Khata.Khata.Entity;
 
-import com.Khata.Khata.Enums.Days;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -10,16 +10,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "Gigs")
-public class Gig {
+@Table(name = "class_types")
+public class ClassType
+{
     @Id
     @GeneratedValue
     private Integer id;
+
+    @Column(nullable = false)
     private Integer userId;
-    private Days[] days;
-    private double payrate;
-    private double timePerDay;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private double defaultRate;
+
+    @Column(nullable = false)
+    private String currency;
 }

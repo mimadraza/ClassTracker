@@ -1,33 +1,42 @@
 package com.Khata.Khata.Entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User
+@Table(name = "classes")
+public class ClassEntry
 {
     @Id
     @GeneratedValue
     private Integer id;
 
-    private String userName;
+    @Column(nullable = false)
+    private Integer userId;
 
     @Column(nullable = false)
-    private String email;
+    private Integer classTypeId;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Column(name = "class_date", nullable = false)
+    private LocalDate date;
+
+    /** Rate snapshot taken at entry time; editable per entry. */
     @Column(nullable = false)
-    private String password;
+    private double rate;
+
+    @Column(nullable = false)
+    private boolean confirmed;
+
+    private String notes;
 }

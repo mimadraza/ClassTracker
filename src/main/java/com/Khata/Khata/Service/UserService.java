@@ -1,33 +1,23 @@
 package com.Khata.Khata.Service;
 
-import com.Khata.Khata.Entity.LoginDTO;
 import com.Khata.Khata.Entity.User;
+import com.Khata.Khata.Exception.ApiException;
 import com.Khata.Khata.Repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService
 {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     UserService(UserRepository userRepository)
     {
         this.userRepository = userRepository;
     }
 
-    public User addUser(User user)
-    {
-        User savedUser = userRepository.save(user);
-        return savedUser;
-    }
-    
     public User getUserById(Integer id)
     {
-        return userRepository.findById(id).get();
-    }
-    public User getUserByCred(LoginDTO credentials)
-    {
-        return userRepository.getUserByCred();
+        return userRepository.findById(id)
+                .orElseThrow(() -> ApiException.notFound("user not found"));
     }
 }
-
